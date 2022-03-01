@@ -1,0 +1,35 @@
+<div class="container mt-3 bg-light p-3 mx-auto">
+  <div class="row">
+    <div class="col mx-auto">
+      <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+        <div class="form-goup">
+          <label for="name">Nombre</label>
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            name="nombre"
+            placeholder="Nombre"
+            [(ngModel)]="name"
+            required
+          />
+        </div>
+        <div class="form-goup">
+          <label for="price">Precio</label>
+          <input
+            type="number"
+            class="form-control"
+            id="price"
+            name="price"
+            placeholder="Precio"
+            [(ngModel)]="price"
+            required
+          />
+        </div>
+        <button class="btn btn-outline-success m-3" [disabled]="!f.valid">
+          Crear
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
